@@ -29,7 +29,7 @@ import org.junit.platform.commons.util.UnrecoverableExceptions;
 /**
  * @since 5.0
  */
-class CsvArgumentsProvider extends AnnotationBasedArgumentsProvider<CsvSource> {
+public class CsvArgumentsProvider extends AnnotationBasedArgumentsProvider<CsvSource> {
 
 	@Override
 	protected Stream<? extends Arguments> provideArguments(ParameterDeclarations parameters, ExtensionContext context,

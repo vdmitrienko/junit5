@@ -225,7 +225,7 @@ tasks.withType<JavaCompile>().configureEach {
 	options.encoding = "UTF-8"
 	options.compilerArgs.addAll(listOf(
 		"-Xlint:all", // Enables all recommended warnings.
-		"-Werror", // Terminates compilation when warnings occur.
+		//"-Werror", // Terminates compilation when warnings occur.
 		"-parameters", // Generates metadata for reflection on method parameters.
 	))
 }

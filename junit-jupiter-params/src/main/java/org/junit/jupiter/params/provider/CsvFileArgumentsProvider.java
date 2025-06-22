@@ -34,11 +34,11 @@ import org.junit.platform.commons.util.Preconditions;
 /**
  * @since 5.0
  */
-class CsvFileArgumentsProvider extends AnnotationBasedArgumentsProvider<CsvFileSource> {
+public class CsvFileArgumentsProvider extends AnnotationBasedArgumentsProvider<CsvFileSource> {
 
 	private final InputStreamProvider inputStreamProvider;
 
-	CsvFileArgumentsProvider() {
+	public CsvFileArgumentsProvider() {
 		this(DefaultInputStreamProvider.INSTANCE);
 	}
 

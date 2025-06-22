@@ -7,6 +7,7 @@ plugins {
 	id("junitbuild.kotlin-library-conventions")
 	id("junitbuild.shadow-conventions")
 	id("junitbuild.jmh-conventions")
+	id("junitbuild.testing-conventions")
 	`java-test-fixtures`
 }
 
@@ -25,6 +26,16 @@ dependencies {
 
 	osgiVerification(projects.junitJupiterEngine)
 	osgiVerification(projects.junitPlatformLauncher)
+}
+
+configurations {
+    jmhImplementation {
+        extendsFrom(shadowed.get())
+    }
+}
+
+jmh {
+    includes = listOf(".*CsvFile*")
 }
 
 tasks {
